@@ -53,7 +53,7 @@ sync-agents /path/to/project
 | `.claude/agents/*.md` | `.opencode/agent/*.md` | Formatted copy |
 | `.mcp.json` | `opencode.jsonc` (merged) | Config merge |
 
-### Codex Target (`--to codex`)
+#### Codex Target (`--to codex`)
 
 | Claude Code Source | Codex Target | Strategy |
 |---|---|---|
@@ -64,7 +64,7 @@ sync-agents /path/to/project
 | `.claude/agents/*.md` | `.codex/agents/*.md` | Formatted copy |
 | `.mcp.json` | `.codex/config.toml` (merged) | Config merge |
 
-### Antigravity IDE Target (`--to antigravity`)
+#### Antigravity IDE Target (`--to antigravity`)
 
 | Claude Code Source | Antigravity Target | Strategy |
 |---|---|---|
@@ -93,7 +93,7 @@ Content
 
 Commands become workflows with a `description` frontmatter. Agents are not syncable (Antigravity manages them through the IDE GUI, not files).
 
-### GitHub Copilot Target (`--to copilot`)
+#### GitHub Copilot Target (`--to copilot`)
 
 | Claude Code Source | Copilot Target | Strategy |
 |---|---|---|
@@ -127,7 +127,7 @@ Copilot has no global config (all configuration is repo-level `.github/`).
 When `--global` (or `-g`) is used, the tool syncs from `~/.claude/` to the target's global/user-level config directory. It also scans `~/.claude/settings.json` for any `mcpServers` key.
 
 | Claude Source (global) | OpenCode | Codex | Antigravity | Copilot |
-|---|---|---|---|---|---|
+|--------|--------|--------|--------|--------|
 | `~/.claude/CLAUDE.md` | `~/.config/opencode/AGENTS.md` | `~/.codex/AGENTS.md` | `~/.gemini/GEMINI.md` | — (repo-level only) |
 | `~/.claude/skills/` | `~/.config/opencode/skills/` | `~/.codex/skills/` | `~/.gemini/antigravity/skills/` | — |
 | `~/.claude/commands/` | `~/.config/opencode/command/` | `~/.codex/skills/command-*/SKILL.md` | `~/.gemini/antigravity/global_workflows/` | — |
