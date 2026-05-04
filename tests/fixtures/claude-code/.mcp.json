@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+        "test-server": {
+            "command": "node",
+            "args": ["server.js"],
+            "env": {
+                "NODE_ENV": "development"
+            }
+        },
+        "test-api": {
+            "type": "http",
+            "url": "http://localhost:3000/mcp"
+        }
+    }
+}

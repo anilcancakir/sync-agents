@@ -1,0 +1,32 @@
+{
+  "name": "sync-agents",
+  "version": "0.1.0",
+  "description": "Sync agent configurations between Claude Code CLI and OpenCode CLI",
+  "main": "dist/index.js",
+  "bin": {
+    "sync-agents": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "claude-code",
+    "opencode",
+    "agents",
+    "ai",
+    "cli"
+  ],
+  "author": "Anilcan Cakir",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  }
+}

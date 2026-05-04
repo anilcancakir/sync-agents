@@ -1,0 +1,3 @@
+- Project-wide coding standard: use tabs for indentation.
+- All commits must follow Conventional Commits.
+- Never use `any` in TypeScript.
