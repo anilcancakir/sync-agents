@@ -44,7 +44,8 @@ export function buildTargetPath(
   sourceRoot: string,
 ): TargetFile | null {
   switch (transformerName) {
-    case 'claude-md': {
+    case 'claude-md':
+    case 'claude-md-copilot': {
       return {
         path: join(projectRoot, COPILOT_CONFIG_DIR, 'copilot-instructions.md'),
         content: '',

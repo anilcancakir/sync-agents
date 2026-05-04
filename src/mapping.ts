@@ -144,7 +144,7 @@ export const TARGET_MAPPINGS: Record<string, TargetMappings> = {
       {
         id: 'claude-md',
         matches: (f: SourceFile) => f.path.endsWith('CLAUDE.md'),
-        transformer: 'claude-md',
+        transformer: 'claude-md-copilot',
         sourceBase: '',
       },
       {

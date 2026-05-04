@@ -32,6 +32,7 @@ import * as mcpJsonToAntigravityMcp from './transformers/mcp-json-to-antigravity
 import * as rulesToCopilotInstructions from './transformers/rules-to-copilot-instructions.js'
 import * as commandsToCopilotPrompts from './transformers/commands-to-copilot-prompts.js'
 import * as skillsToCopilotAgents from './transformers/skills-to-copilot-agents.js'
+import * as claudeMdToCopilotInstructions from './transformers/claude-md-to-copilot-instructions.js'
 
 interface Adapter {
   buildTargetPath: typeof OpenCodeTarget.buildTargetPath
@@ -88,6 +89,7 @@ const TRANSFORMERS: Record<string, {
   'rule-copilot': rulesToCopilotInstructions,
   'command-copilot': commandsToCopilotPrompts,
   'skill-copilot': skillsToCopilotAgents,
+  'claude-md-copilot': claudeMdToCopilotInstructions,
 }
 
 interface SyncResult {
