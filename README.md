@@ -97,7 +97,7 @@ Commands become workflows with a `description` frontmatter. Agents are not synca
 
 | Claude Code Source | Copilot Target | Strategy |
 |---|---|---|
-| `CLAUDE.md` | `.github/copilot-instructions.md` | Relative symlink |
+| `CLAUDE.md` | `.github/copilot-instructions.md` | File copy |
 | `.claude/rules/*.md` (conditional) | `.github/instructions/<name>.instructions.md` | Formatted copy (`path:` → `applyTo:`) |
 | `.claude/rules/*.md` (unconditional) | `.github/instructions/<name>.instructions.md` | Formatted copy (`applyTo: "**"`) |
 | `.claude/commands/*.md` | `.github/prompts/<name>.prompt.md` | Formatted copy |
@@ -105,7 +105,7 @@ Commands become workflows with a `description` frontmatter. Agents are not synca
 | `.claude/agents/*.md` | `.github/agents/<name>.agent.md` | Formatted copy |
 | `.mcp.json` | — | Skip (no file-based MCP in Copilot) |
 
-Copilot instructions use `applyTo` (required) instead of Claude's `path:`. Prompts have no frontmatter (plain Markdown only). Agents use Copilot tool aliases: `execute`, `read`, `edit`, `search`, `web`, `todo`, `agent`.
+Copilot instructions use `applyTo` (required) instead of Claude's `path:`. Prompts have no frontmatter (plain Markdown only). Agents use Copilot tool aliases: `execute`, `read`, `edit`, `search`, `web`, `todo`, `agent`. Symlinks are not used (Copilot reads from git repos and cannot resolve them).
 
 ```yaml
 # Conditional rule → instruction
